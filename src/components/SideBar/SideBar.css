@@ -1,0 +1,63 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 300px;
+  height: 100vh;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.208);
+  background-color: white;
+  left: 0;
+  transition: width 0.5s;
+}
+.isClosed.sidebar {
+  width: 65px;
+  position: relative;
+  height: 100vh;
+}
+.isClosed .item .text {
+  margin: 0;
+  font-size: 0;
+}
+.isClosed .item {
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.item {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  border-radius: 2px 10px 10px 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  list-style: none;
+  margin-bottom: 1rem;
+  transition: backgroun-color 0.7s;
+  
+}
+.item:hover {
+  background-color: #e1e1e1;
+}
+
+.item li {
+  display: flex;
+  list-style: none;
+}
+
+.item .text {
+  align-self: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+
+.selected.item:hover {
+  background-color: var(--btn-color);
+}
+.selected {
+  color: white;
+  background-color: var(--btn-color);
+}

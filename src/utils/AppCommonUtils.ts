@@ -1,0 +1,1 @@
+export const emailTlds=["com","in","org"];

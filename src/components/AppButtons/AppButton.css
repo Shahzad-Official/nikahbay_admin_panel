@@ -1,0 +1,28 @@
+.primary-button {
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: 45;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .primary-button:hover {
+    background-color: var(--btn-color);
+    transform: scale(1.01);
+    color: white;
+  }
+  
+  /* Button active effect (when clicked) */
+  .primary-button:active {
+    background-color: var(--btn-color);
+    transform: scale(0.95);
+    color: white;
+  }

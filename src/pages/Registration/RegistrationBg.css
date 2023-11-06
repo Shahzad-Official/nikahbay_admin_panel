@@ -1,0 +1,41 @@
+.registration-bg {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/images/body_bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.registration-bg-body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+.registration-footer-txt {
+  color: var(--text-color);
+}
+
+.bg-block {
+  display: block;
+  padding: 20px;
+  height: auto;
+  width: 400px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.registration-card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #af0171;
+    --secondary-color: #e80f88;
+    --btn-color: #790252;
+    --bg-color: white;
+    --text-color: white;
+    --btn-hover-color: rgba(128, 128, 128, 0.1);
+    --field-padding: 12px;
+    --icon-btn-color: whiteSmoke;
+  }

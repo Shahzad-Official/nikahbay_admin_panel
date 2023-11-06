@@ -1,0 +1,10 @@
+.time{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}

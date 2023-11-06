@@ -1,0 +1,95 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-color {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
+.svg {
+  fill: black;
+  height: 1.7rem;
+  width: 1.7rem;
+}
+.svg-logo {
+  fill: var(--primary-color);
+}
+.svg-secondary {
+  fill: #999999;
+  height: 1.7rem;
+  width: 1.7rem;
+}
+.svg.selected {
+  fill: white;
+}
+.svg-secondary.selected {
+  fill: #bfbfbf;
+}
+
+
+
+.scrollable-content {
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  justify-content: space-between;
+  width: 100%;
+  align-items:start;
+}
+.icon-button {
+  margin: 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+
+.icon-button:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+.body-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+
+}
+button:focus{
+border-color: black;
+}

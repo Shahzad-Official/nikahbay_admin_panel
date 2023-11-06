@@ -1,0 +1,27 @@
+.pin-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pinput {
+  width: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transform: scale(1);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.pinput:focus {
+  outline-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+
