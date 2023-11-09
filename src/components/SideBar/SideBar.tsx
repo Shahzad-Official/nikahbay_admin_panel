@@ -56,7 +56,8 @@ export default function SideBar() {
 
   return (
     <aside className={`${isOpen ? "" : "isClosed"} sidebar`}>
-      <IconButton className="m-2 self-end">
+      
+      <IconButton className="m-2 bg-teal-400 self-end">
         <Squash
         toggled={isOpen}
         duration={0.7}

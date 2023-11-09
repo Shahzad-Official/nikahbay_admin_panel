@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import RegistrationBg from "../RegistrationBg";
 import "./Login.css";
 import AppField from "components/AppFields/AppField";
@@ -16,8 +16,10 @@ import AppButton from "components/AppButtons/AppButton";
 import OrDivider from "components/OrDivider/OrDivider";
 import { useNavigate } from "react-router-dom";
 import usePinVerification from "hooks/usePinVerification";
-
+import { PulseLoader } from "react-spinners";
+import { login } from "../api/auth";
 function Login() {
+  const [isLoading,setIsLoading]=useState(false);
   const navigate = useNavigate();
   const {
     isObsecure,
@@ -36,7 +38,7 @@ function Login() {
     validateForm();
   }
 
-  function handleValidation() {
+  async function handleValidation() {
     if (errorMessage !== "") {
       toast(errorMessage, {
         type: "error",
@@ -44,10 +46,28 @@ function Login() {
       });
       localStorage.setItem("isLogin", "false");
     } else {
+      setIsLoading(true);
+     const loadingToast= toast.loading("logging in...",{
+        position:"top-center",
+      });
+     const data=await login(formData.email,formData.password);
+     if(data.success){
+      
+      localStorage.setItem("token", `${data.token}`);
       setEmail(formData.email);
       navigate("/login/pin", { replace: true });
-      localStorage.setItem("isLogin", "true");
+      toast.dismiss(loadingToast);
       resetStore();
+     }else{
+      toast.dismiss(loadingToast);
+      toast(data.message, {
+        type: "error",
+        position: "top-center",
+      });
+      localStorage.setItem("isLogin", "false");
+     }
+     setIsLoading(false);
+     
     }
   }
   function handleKeyPress(e: React.KeyboardEvent<HTMLDivElement>) {
@@ -99,7 +119,9 @@ function Login() {
         }}
       />
       <AppButton id={"login"} onClick={handleValidation} className="mt-2">
-        LogIn
+       {
+        isLoading? <PulseLoader  className="self-center pt-1" color="white" />:"Login"
+       }
       </AppButton>
       <OrDivider className="mt-3" />
       <TextButton

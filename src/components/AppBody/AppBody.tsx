@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-
+import styles from "./AppBody.module.css";
 import AppAvatar from "../AppAvatar/AppAvatar";
 import BellIcon from "assets/icons/BellIcon";
 import Badge from "components/Badge/Badge";
@@ -9,7 +9,7 @@ interface AppBodyProps {
 
 export default function AppBody({ children }: AppBodyProps) {
   return (
-    <div className="body-box">
+    <div className={styles['body-box']}>
       <div className="row ">
         <span />
 

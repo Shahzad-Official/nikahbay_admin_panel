@@ -1,11 +1,10 @@
-.icon-btn {
-  width: fit-content;
+.iconbtn {
   cursor: pointer;
   background-color: var(--icon-btn-color);
   color: black;
   border-radius: 100px;
   transition: all 0.3s;
 }
-.icon-btn:hover {
+.iconbtn:hover {
   transform: scale(1.1);
 }

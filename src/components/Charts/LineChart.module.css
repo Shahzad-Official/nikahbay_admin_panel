@@ -1,0 +1,15 @@
+.custom-tooltip {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.legend-color {
+  width: 20px;
+  height: 10px;
+  margin-right: 5px;
+}

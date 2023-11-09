@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import "./IconButton.css";
+import styles from "./IconButton.module.css";
 
 interface IconButtonProps {
   children?: ReactNode;
@@ -8,7 +8,7 @@ interface IconButtonProps {
 }
 
 function IconButton({ className, children, onClick }: IconButtonProps) {
-  return <div className={`${className}  icon-btn`}>{children}</div>;
+  return <div className={`${className}  ${styles.iconbtn}`} onClick={onClick}>{children}</div>;
 }
 
 export default IconButton;
